@@ -54,5 +54,22 @@ public class BruteRasterImage implements Image {
         return colors[0].length;
     }
 
+    protected void setWidth(int width){
+        Color[][] colors2 = new Color[width][height];
+        for (int i = 0; i < colors2.length && i < this.width  ; i++)
+            for (int j = 0; j < colors2[0].length ; j++)
+                colors2[i][j] = colors[i][j];
+            this.colors = colors2;
+
+    }
+
+    protected void setHeight(int height){
+        Color[][] colors2 = new Color[width][height];
+        for (int i = 0; i < colors2.length ; i++)
+            for (int j = 0; j < colors2[0].length && j < this.height ; j++)
+                colors2[i][j] = colors[i][j];
+        this.colors = colors2;
+    }
+
 
 }
