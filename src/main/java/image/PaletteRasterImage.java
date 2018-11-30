@@ -1,6 +1,8 @@
 package image;
 
+import java.awt.*;
+
 public class PaletteRasterImage {
-    PaletteRasterImage palette;
-    int index;
+    List<Color> palette;
+    int[][] indexesOfColors;
 }
