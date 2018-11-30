@@ -45,4 +45,14 @@ public class BruteRasterImage implements Image {
             for (int j = 0; j < height; j++)
                 colors[i][j] = color;
     }
+
+    public int getWidth(){
+        return colors.length;
+    }
+
+    public int getHeight(){
+        return colors[0].length;
+    }
+
+
 }
