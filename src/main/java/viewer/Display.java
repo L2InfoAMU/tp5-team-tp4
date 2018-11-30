@@ -52,4 +52,5 @@ public class Display implements Initializable {
         pixelWriter.setColor(x, y, image.getPixelColor(x, y));
     }
 
+    imageFactory = new RasterUniformImageFactory(200, 200, Color.RED, RasterImageType.BRUTE;
 }
