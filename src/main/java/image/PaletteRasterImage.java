@@ -5,17 +5,13 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PaletteRasterImage implements Image {
+public class PaletteRasterImage extends RasterImage implements Image {
 
     List<Color> palette;
     int[][] indexesOfColors;
-    int width;
-    int height;
 
     public PaletteRasterImage(Color color, int width, int height) {
-        this.width = width;
-        this.height = height;
-        palette = new ArrayList<>();
+        super(width,height);
         indexesOfColors = new int[width][height];
         palette.add(color);
         for (int i = 0; i < width; i++)

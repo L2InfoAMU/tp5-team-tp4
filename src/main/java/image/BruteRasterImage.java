@@ -2,14 +2,13 @@ package image;
 
 import javafx.scene.paint.Color;
 
-public class BruteRasterImage implements Image {
+public class BruteRasterImage extends RasterImage implements Image {
     Color[][] colors;
     int width;
     int height;
 
     public BruteRasterImage(Color color, int width, int height) {
-        this.width = width;
-        this.height = height;
+        super(width,height);
         colors = new Color[width][height];
         for (int i = 0; i < width; i++)
             for (int j = 0; j < height; j++)
