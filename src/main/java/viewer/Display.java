@@ -26,6 +26,11 @@ public class Display implements Initializable {
 
         imageFactory = new RasterFlagFactory(900, 600, Color.BLUE, Color.WHITE, Color.RED, RasterImageType.BRUTE);
 
+        imageFactory = new RasterUniformImageFactory(200, 200, Color.RED, RasterImageType.BRUTE);
+
+        imageFactory = new RasterFlagFactory(900, 600, Color.BLUE, Color.WHITE, Color.RED, RasterImageType.BRUTE);
+
+
         this.image = imageFactory.makeImage();
 
         render();
@@ -51,6 +56,4 @@ public class Display implements Initializable {
     private void renderPixel(int x, int y, PixelWriter pixelWriter) {
         pixelWriter.setColor(x, y, image.getPixelColor(x, y));
     }
-
-    imageFactory = new RasterUniformImageFactory(200, 200, Color.RED, RasterImageType.BRUTE;
 }

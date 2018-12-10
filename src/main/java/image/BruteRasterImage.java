@@ -1,6 +1,6 @@
 package image;
 
-import java.awt.*;
+import javafx.scene.paint.Color;
 
 public class BruteRasterImage implements Image {
     Color[][] colors;
@@ -23,6 +23,7 @@ public class BruteRasterImage implements Image {
     }
 
     public void creatRepresentation() {
+            Color[][] colors = new Color[getWidth()][getHeight()];
     }
 
     public void setPixelColor(Color color, int x, int y) {
@@ -71,5 +72,6 @@ public class BruteRasterImage implements Image {
         this.colors = colors2;
     }
 
+    //Enum<RasterImageType> Brute;
 
 }
