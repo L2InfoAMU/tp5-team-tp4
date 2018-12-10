@@ -48,14 +48,13 @@ public class PaletteRasterImage implements Image{
 
     @Override
     public int getWidth() {
-
         return this.width;
 
     }
 
     @Override
     public int getHeight() {
-        return 0;
+        return this.height;
     }
 
 
