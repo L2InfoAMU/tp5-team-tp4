@@ -27,13 +27,23 @@ public class RasterImage implements Image{
 
     @Override
     public int getWidth() {
-        return 0;
+        return colors.length;
     }
 
     @Override
     public int getHeight() {
-        return 0;
+        return colors[0].length;
     }
 
+    public void setWidth(int width) {
+        this.width = width;
+    }
 
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setColors(Color[][] colors) {
+        this.colors = colors;
+    }
 }

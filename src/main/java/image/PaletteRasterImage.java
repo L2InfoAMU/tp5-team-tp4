@@ -46,26 +46,26 @@ public class PaletteRasterImage extends RasterImage implements Image {
 
         @Override
         public Color getPixelColor ( int x, int y){
-            super.getPixelColor(x,y);
+            return super.getPixelColor(x,y);
         }
 
         @Override
         public int getWidth () {
-            return this.width;
+            return super.getWidth();
 
         }
 
         @Override
         public int getHeight () {
-            return this.height;
+            return super.getHeight();
         }
 
-        public void setWidth ( int width){
-            this.width = width;
+        public void setWidth (int width){
+            super.setWidth(width);
         }
 
-        public void setHeight ( int height){
-            this.height = height;
+        public void setHeight (int height){
+            super.setHeight(height);
         }
 
         public void setPixelsColor (Color[][]pixels){

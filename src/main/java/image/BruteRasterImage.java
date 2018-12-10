@@ -32,7 +32,7 @@ public class BruteRasterImage extends RasterImage implements Image {
     }
 
     public Color getPixelColor(int x, int y) {
-        super.getPixelColor(x,y);
+        return super.getPixelColor(x,y);
     }
 
     private void setPixelsColor(Color[][] pixels) {
@@ -49,14 +49,14 @@ public class BruteRasterImage extends RasterImage implements Image {
     }
 
     public int getWidth(){
-        return colors.length;
+        return super.getWidth();
     }
 
     public int getHeight(){
-        return colors[0].length;
+        return super.getHeight();
     }
 
-    protected void setWidth(int width){
+    public void setWidth(int width){
         Color[][] colors2 = new Color[width][height];
         for (int i = 0; i < colors2.length && i < this.width  ; i++)
             for (int j = 0; j < colors2[0].length ; j++)
@@ -65,7 +65,7 @@ public class BruteRasterImage extends RasterImage implements Image {
 
     }
 
-    protected void setHeight(int height){
+    public void setHeight(int height){
         Color[][] colors2 = new Color[width][height];
         for (int i = 0; i < colors2.length ; i++)
             for (int j = 0; j < colors2[0].length && j < this.height ; j++)
